@@ -12,7 +12,6 @@ export const getRepositories = async (req: Request, res: Response) => {
 
 export const getDetailRepositorie = async (req: Request, res: Response) => {
     try {
-      console.log(req.params);
       const repositories = await fetchCommitRepositorie(req.params.owner, req.params.repoName);
       res.status(200).json(repositories);
     } catch (error) {
